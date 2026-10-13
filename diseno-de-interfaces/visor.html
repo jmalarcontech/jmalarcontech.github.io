@@ -871,12 +871,9 @@
 
     if (host.endsWith(".github.io")) {
       detectedOwner = host.split(".")[0];
-      const segments = pathname.split("/").filter(Boolean);
-      if (segments.length > 0 && !segments[0].endsWith(".html")) {
-        detectedRepo = segments[0];
-      } else {
-        detectedRepo = detectedOwner + ".github.io";
-      }
+      // Las carpetas de la web (p. ej. diseno-de-interfaces) no son repos:
+      // todo vive en el repo usuario.github.io
+      detectedRepo = detectedOwner + ".github.io";
     }
 
     if (params.get("repo")) {
