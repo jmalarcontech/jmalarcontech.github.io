@@ -74,3 +74,114 @@ button {
 button:hover {
   background: #1f3a63;
 }
+/* ===== Consola en la página (js/consola.js) ===== */
+.consola-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.consola-cabecera button {
+  padding: 5px 12px;
+  font-size: 0.85rem;
+}
+
+.consola-lineas {
+  background: #fbfcfe;
+  border: 1px solid #e3e7ef;
+  border-radius: 6px;
+}
+
+.consola-linea {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eef1f6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.consola-linea:last-child {
+  border-bottom: none;
+}
+
+.consola-etiqueta {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #e3e7ef;
+  color: #3c4a60;
+}
+
+.consola-info .consola-etiqueta {
+  background: #dbe8ff;
+  color: #1f4fa3;
+}
+
+.consola-warn {
+  background: #fff8e1;
+}
+
+.consola-warn .consola-etiqueta {
+  background: #ffe8a3;
+  color: #7a5600;
+}
+
+.consola-error {
+  background: #fff0f0;
+  color: #a32020;
+}
+
+.consola-error .consola-etiqueta {
+  background: #ffd6d6;
+  color: #a32020;
+}
+
+.consola-debug,
+.consola-vacia {
+  color: #6b7280;
+}
+
+.consola-vacia {
+  font-style: italic;
+}
+
+.consola-tabla-caja {
+  flex: 1;
+  min-width: 0;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.consola-tabla {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.consola-tabla th,
+.consola-tabla td {
+  border: 1px solid #d5dbe6;
+  padding: 3px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.consola-tabla th {
+  position: sticky;
+  top: 0;
+  background: #eef1f6;
+}
+
+.nota {
+  margin: 12px 0 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: #5b6878;
+}
